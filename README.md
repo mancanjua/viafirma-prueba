@@ -9,7 +9,7 @@ En caso de que el directorio proporcionado se trate de un archivo, si es un arch
 Una vez obtenidas la lista de archivos PDF, por cada uno de ellos se realiza una llamada al método `addPage`, el cual dada la ruta de un archivo PDF, añade una página en blanco al final del mismo.
 
 
-###¿Cómo harías para poder ejecutar N veces el proceso sobre el mismo directorio y solo modificar cada PDF una sola vez?
+### Cómo harías para poder ejecutar N veces el proceso sobre el mismo directorio y solo modificar cada PDF una sola vez?
 
 Para evitar modificar PDFs múltiples veces, se me ocurren dos opciones distintas, una haciendo uso de un registro de documentos ya modificados, y, otra, implementando un método que permita, en este caso, comparar la última página del documento con la página en blanco que se pretende insertar.
 
@@ -19,11 +19,11 @@ De la otra forma, habría que implementar una forma alternativa de comparación 
 
 Este atributo `page` es una instancia de la clase `COSDictionary`, la cual contiene toda la información relativa a los objetos que una página contiene en su interior. Es por ello que, para realizar una correcta comparación entre dos páginas, debe asegurarse que todos los elementos que componen dicha página sean copias exactas.
 
-###¿Qué pasa si el directorio contiene un fichero que no es un PDF?
+### Qué pasa si el directorio contiene un fichero que no es un PDF?
 
 De la forma en la que se ha explicado previamente, esto no supone ningún problema, ya que dado un directorio, se recorren todas las rutas que contiene dicho directorio, comprobando en primer lugar si se trata de un archivo y no de otro directorio, y, después, comprobando si el archivo en cuestión se trata de un fichero PDF.
 
-###¿Cómo probar/ejecutar la aplicación?
+### Cómo probar/ejecutar la aplicación?
 
 En primer lugar, una vez clonado el repositorio se deben descargar las librerías necesarias mediante maven.
 
@@ -74,7 +74,7 @@ Ambas ejecuciones tendrán el mismo resultado previamente mostrado:
 [INFO ] 2023-02-13 17:12:08.571 [main] PDFTools - Página en blanco añadida al fichero D:\Programación\viafirma\viafirma-prueba\test.pdf
 ```
 
-###¿Cómo podemos ver los logs?
+### Cómo podemos ver los logs?
 
 Para llevar a cabo un registro de todas las acciones, se utiliza la librería Log4j, mediante la cual se han establecido, en distintos puntos del código, diferentes tipos de trazas, en este caso informativas y sobre errores en el funcionamiento de la aplicación.
 
